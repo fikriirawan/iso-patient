@@ -77,11 +77,17 @@
 <!-- Navigation -->
 <nav class="px-10 py-4 flex items-center justify-between">
   <strong class="text-blue-900">iSmartOffice Patient</strong>
-  <div>
-    <a href="#intro">Intro</a>
-    <a href="#step1">Langkah</a>
-    <a href="#install">Install</a>
-    <a href="#resources">Resources</a>
+  <div class="flex items-center gap-4">
+    <div class="text-sm text-blue-900">
+      <button onclick="setLang('id')" class="underline mr-2">ID</button>
+      <button onclick="setLang('en')" class="underline">EN</button>
+    </div>
+    <div>
+      <a href="#intro">Intro</a>
+      <a href="#step1">Steps</a>
+      <a href="#install">Install</a>
+      <a href="#resources">Resources</a>
+    </div>
   </div>
 </nav>
 
@@ -89,118 +95,89 @@
 <section id="intro" class="bg-blue-900 text-white flex items-center">
   <div class="circle big"></div>
   <div class="max-w-4xl">
-    <h1 class="title text-white">Panduan Open Testing<br>iSmartOffice Patient</h1>
-    <p class="subtitle text-blue-100">
-      Panduan singkat dan praktis untuk tester bergabung, menginstal, dan memberikan feedback
-      pada aplikasi iSmartOffice Patient melalui Google Play Open Testing.
-    </p>
+    <h1 class="title text-white" data-id="Panduan Open Testing<br>iSmartOffice Patient" data-en="Open Testing Guide<br>iSmartOffice Patient"></h1>
+    <p class="subtitle text-blue-100" data-id="Panduan singkat dan praktis untuk tester bergabung, menginstal, dan memberikan feedback pada aplikasi iSmartOffice Patient melalui Google Play Open Testing." data-en="A concise and practical guide for testers to join, install, and provide feedback on the iSmartOffice Patient app via Google Play Open Testing."></p>
   </div>
 </section>
 
-<!-- PENGENALAN -->
+<!-- INTRO -->
 <section class="flex items-center">
   <div class="circle medium"></div>
   <div class="max-w-3xl">
-    <h2 class="title text-blue-900">Apa itu Open Testing?</h2>
-    <p class="subtitle">
-      Open Testing adalah pengujian publik di Google Play. Siapa pun yang memiliki tautan opt-in
-      dapat bergabung sebagai tester dan menginstal aplikasi versi uji langsung dari Play Store.
-    </p>
+    <h2 class="title text-blue-900" data-id="Apa itu Open Testing?" data-en="What is Open Testing?"></h2>
+    <p class="subtitle" data-id="Open Testing adalah pengujian publik di Google Play. Siapa pun yang memiliki tautan opt-in dapat bergabung sebagai tester dan menginstal aplikasi versi uji langsung dari Play Store." data-en="Open Testing is a public testing program on Google Play. Anyone with an opt-in link can join as a tester and install the testing version directly from the Play Store."></p>
   </div>
 </section>
 
-<!-- LANGKAH 1–5 -->
+<!-- STEPS -->
 <section id="step1">
-  <h2 class="title text-blue-900">Langkah Inti Open Testing</h2>
+  <h2 class="title text-blue-900" data-id="Langkah Inti Open Testing" data-en="Core Open Testing Steps"></h2>
 
   <div class="grid md:grid-cols-2 gap-10 max-w-5xl">
     <div>
-      <h3 class="font-bold text-xl text-blue-900 mb-2">1. Siapkan Build</h3>
-      <p class="text-gray-600">Build AAB rilis, versionCode dinaikkan, target API terbaru.</p>
+      <h3 class="font-bold text-xl text-blue-900 mb-2" data-id="1. Siapkan Build" data-en="1. Prepare the Build"></h3>
+      <p class="text-gray-600" data-id="Build AAB rilis, versionCode dinaikkan, target API terbaru." data-en="Prepare a release AAB, increment versionCode, and target the latest API."></p>
     </div>
     <div>
-      <h3 class="font-bold text-xl text-blue-900 mb-2">2. Setup Track</h3>
-      <p class="text-gray-600">Play Console → Testing → Open Testing → Create Release.</p>
+      <h3 class="font-bold text-xl text-blue-900 mb-2" data-id="2. Setup Track" data-en="2. Set Up the Track"></h3>
+      <p class="text-gray-600" data-id="Play Console → Testing → Open Testing → Create Release." data-en="Play Console → Testing → Open Testing → Create Release."></p>
     </div>
     <div>
-      <h3 class="font-bold text-xl text-blue-900 mb-2">3. Upload & Rollout</h3>
-      <p class="text-gray-600">Upload AAB, isi release notes, dan mulai rollout.</p>
+      <h3 class="font-bold text-xl text-blue-900 mb-2" data-id="3. Upload & Rollout" data-en="3. Upload & Roll Out"></h3>
+      <p class="text-gray-600" data-id="Upload AAB, isi release notes, dan mulai rollout." data-en="Upload the AAB, add release notes, and start rollout."></p>
     </div>
     <div>
-      <h3 class="font-bold text-xl text-blue-900 mb-2">4. Bagikan Link</h3>
-      <p class="text-gray-600">Sebarkan tautan opt-in ke calon tester.</p>
-    </div>
-    <div>
-      <h3 class="font-bold text-xl text-blue-900 mb-2">5. Pantau & Evaluasi</h3>
-      <p class="text-gray-600">Kumpulkan feedback, crash report, dan ANR.</p>
+      <h3 class="font-bold text-xl text-blue-900 mb-2" data-id="4. Bagikan Link" data-en="4. Share the Link"></h3>
+      <p class="text-gray-600" data-id="Sebarkan tautan opt-in ke calon tester." data-en="Distribute the opt-in link to testers."></p>
     </div>
   </div>
 </section>
 
-<!-- INSTALL USER -->
+<!-- INSTALL -->
 <section id="install" class="bg-gray-50">
-  <h2 class="title text-blue-900">Cara Tester Install Aplikasi</h2>
+  <h2 class="title text-blue-900" data-id="Cara Tester Install Aplikasi" data-en="How Testers Install the App"></h2>
 
   <div class="grid md:grid-cols-2 gap-10 max-w-5xl items-center">
-    <!-- Instructions -->
     <div>
       <ol class="list-decimal ml-6 text-gray-700 space-y-4">
-        <li>Scan <strong>QR Code Open Testing</strong> di samping menggunakan kamera HP.</li>
-        <li>Tap tombol <strong>“Jadi penguji”</strong> (login dengan akun Google yang sama).</li>
-        <li>Setelah berhasil opt-in, aplikasi akan terbuka di Google Play Store.</li>
-        <li>Tap <strong>Install</strong> atau <strong>Update</strong> dan aktifkan pembaruan otomatis.</li>
+        <li data-id="Scan QR Code Open Testing menggunakan kamera HP." data-en="Scan the Open Testing QR code using your phone camera."></li>
+        <li data-id="Tap 'Jadi penguji' dan login dengan akun Google." data-en="Tap 'Become a tester' and sign in with your Google account."></li>
+        <li data-id="Aplikasi terbuka di Google Play Store." data-en="The app will open in the Google Play Store."></li>
+        <li data-id="Tap Install atau Update." data-en="Tap Install or Update."></li>
       </ol>
-
-      <p class="mt-6 text-sm text-gray-500">
-        Catatan: Untuk keluar dari program uji, buka kembali link Open Testing lalu pilih
-        <strong>“Keluar dari program uji”</strong>, kemudian uninstall aplikasi.
-      </p>
     </div>
-
-    <!-- QR Code -->
     <div class="flex flex-col items-center">
       <div class="bg-white p-6 rounded-2xl shadow-lg">
-        <img
-          src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https://play.google.com/apps/testing/ai.ismartoffice.patient"
-          alt="QR Open Testing iSmartOffice Patient"
-          class="w-64 h-64"
-        />
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https://play.google.com/apps/testing/ai.ismartoffice.patient" class="w-64 h-64" />
       </div>
-      <a
-        href="https://play.google.com/apps/testing/ai.ismartoffice.patient"
-        target="_blank"
-        class="mt-4 inline-block px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800"
-      >
-        Buka Link Open Testing
-      </a>
+      <a href="https://play.google.com/apps/testing/ai.ismartoffice.patient" target="_blank" class="mt-4 inline-block px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800">Open Testing Link</a>
     </div>
   </div>
 </section>
 
 <!-- RESOURCES -->
 <section id="resources" class="bg-blue-900 text-white">
-  <h2 class="title text-white">Resources & Kontak</h2>
-
+  <h2 class="title text-white" data-id="Resources & Kontak" data-en="Resources & Contact"></h2>
   <div class="space-y-4 max-w-3xl">
-    <p>
-      Open Testing Google Play:
-      <a class="underline text-blue-200" target="_blank" href="https://play.google.com/console/about/opentesting/">
-        play.google.com/console/about/opentesting
-      </a>
-    </p>
     <p>Email: <strong>support@ismartdds.com</strong></p>
-    <p>Support Portal:
-      <a class="underline text-blue-200" target="_blank" href="https://knowledge-hub.ismartdds.com/#questionmore">
-        knowledge-hub.ismartdds.com
-      </a>
+    <p>
+      <a class="underline text-blue-200" target="_blank" href="https://knowledge-hub.ismartdds.com/#questionmore">Knowledge Hub</a>
     </p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="text-center py-6 text-sm text-gray-500">
   © 2025 iSmartOffice Patient — Open Testing Guide
 </footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-id]').forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+  }
+  setLang('id');
+</script>
 
 </body>
 </html>
