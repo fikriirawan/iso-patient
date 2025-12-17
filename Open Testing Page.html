@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iSmartOffice Patient – Open Testing Guide</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto Mono', monospace;
+      scroll-behavior: smooth;
+      background-color: #FFFFFF;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      color: #6B7280;
+      max-width: 640px;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background-color: rgba(191, 219, 254, 0.35);
+      z-index: -1;
+    }
+
+    .circle.big { width: 600px; height: 600px; top: -150px; right: -150px; }
+    .circle.medium { width: 400px; height: 400px; bottom: -120px; left: 10%; }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid rgba(30,58,138,0.15);
+      z-index: 50;
+    }
+
+    nav a {
+      color: #1E3A8A;
+      font-size: 0.9rem;
+      margin-right: 18px;
+    }
+
+    nav a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="px-10 py-4 flex items-center justify-between">
+  <strong class="text-blue-900">iSmartOffice Patient</strong>
+  <div>
+    <a href="#intro">Intro</a>
+    <a href="#step1">Langkah</a>
+    <a href="#install">Install</a>
+    <a href="#resources">Resources</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="intro" class="bg-blue-900 text-white flex items-center">
+  <div class="circle big"></div>
+  <div class="max-w-4xl">
+    <h1 class="title text-white">Panduan Open Testing<br>iSmartOffice Patient</h1>
+    <p class="subtitle text-blue-100">
+      Panduan singkat dan praktis untuk tester bergabung, menginstal, dan memberikan feedback
+      pada aplikasi iSmartOffice Patient melalui Google Play Open Testing.
+    </p>
+  </div>
+</section>
+
+<!-- PENGENALAN -->
+<section class="flex items-center">
+  <div class="circle medium"></div>
+  <div class="max-w-3xl">
+    <h2 class="title text-blue-900">Apa itu Open Testing?</h2>
+    <p class="subtitle">
+      Open Testing adalah pengujian publik di Google Play. Siapa pun yang memiliki tautan opt-in
+      dapat bergabung sebagai tester dan menginstal aplikasi versi uji langsung dari Play Store.
+    </p>
+  </div>
+</section>
+
+<!-- LANGKAH 1–5 -->
+<section id="step1">
+  <h2 class="title text-blue-900">Langkah Inti Open Testing</h2>
+
+  <div class="grid md:grid-cols-2 gap-10 max-w-5xl">
+    <div>
+      <h3 class="font-bold text-xl text-blue-900 mb-2">1. Siapkan Build</h3>
+      <p class="text-gray-600">Build AAB rilis, versionCode dinaikkan, target API terbaru.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-xl text-blue-900 mb-2">2. Setup Track</h3>
+      <p class="text-gray-600">Play Console → Testing → Open Testing → Create Release.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-xl text-blue-900 mb-2">3. Upload & Rollout</h3>
+      <p class="text-gray-600">Upload AAB, isi release notes, dan mulai rollout.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-xl text-blue-900 mb-2">4. Bagikan Link</h3>
+      <p class="text-gray-600">Sebarkan tautan opt-in ke calon tester.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-xl text-blue-900 mb-2">5. Pantau & Evaluasi</h3>
+      <p class="text-gray-600">Kumpulkan feedback, crash report, dan ANR.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALL USER -->
+<section id="install" class="bg-gray-50">
+  <h2 class="title text-blue-900">Cara Tester Install Aplikasi</h2>
+
+  <div class="grid md:grid-cols-2 gap-10 max-w-5xl items-center">
+    <!-- Instructions -->
+    <div>
+      <ol class="list-decimal ml-6 text-gray-700 space-y-4">
+        <li>Scan <strong>QR Code Open Testing</strong> di samping menggunakan kamera HP.</li>
+        <li>Tap tombol <strong>“Jadi penguji”</strong> (login dengan akun Google yang sama).</li>
+        <li>Setelah berhasil opt-in, aplikasi akan terbuka di Google Play Store.</li>
+        <li>Tap <strong>Install</strong> atau <strong>Update</strong> dan aktifkan pembaruan otomatis.</li>
+      </ol>
+
+      <p class="mt-6 text-sm text-gray-500">
+        Catatan: Untuk keluar dari program uji, buka kembali link Open Testing lalu pilih
+        <strong>“Keluar dari program uji”</strong>, kemudian uninstall aplikasi.
+      </p>
+    </div>
+
+    <!-- QR Code -->
+    <div class="flex flex-col items-center">
+      <div class="bg-white p-6 rounded-2xl shadow-lg">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https://play.google.com/apps/testing/ai.ismartoffice.patient"
+          alt="QR Open Testing iSmartOffice Patient"
+          class="w-64 h-64"
+        />
+      </div>
+      <a
+        href="https://play.google.com/apps/testing/ai.ismartoffice.patient"
+        target="_blank"
+        class="mt-4 inline-block px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800"
+      >
+        Buka Link Open Testing
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources" class="bg-blue-900 text-white">
+  <h2 class="title text-white">Resources & Kontak</h2>
+
+  <div class="space-y-4 max-w-3xl">
+    <p>
+      Open Testing Google Play:
+      <a class="underline text-blue-200" target="_blank" href="https://play.google.com/console/about/opentesting/">
+        play.google.com/console/about/opentesting
+      </a>
+    </p>
+    <p>Email: <strong>support@ismartdds.com</strong></p>
+    <p>Support Portal:
+      <a class="underline text-blue-200" target="_blank" href="https://knowledge-hub.ismartdds.com/#questionmore">
+        knowledge-hub.ismartdds.com
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 text-sm text-gray-500">
+  © 2025 iSmartOffice Patient — Open Testing Guide
+</footer>
+
+</body>
+</html>
