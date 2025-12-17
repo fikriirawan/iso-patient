@@ -77,11 +77,18 @@
 <!-- Navigation -->
 <nav class="px-10 py-4 flex items-center justify-between">
   <strong class="text-blue-900">iSmartOffice Patient</strong>
-  <div class="flex items-center gap-4">
-    <div class="text-sm text-blue-900">
-      <button onclick="setLang('id')" class="underline mr-2">ID</button>
-      <button onclick="setLang('en')" class="underline">EN</button>
+  <div class="flex items-center gap-6">
+    <!-- Language Switcher -->
+    <div class="flex items-center gap-2">
+      <button onclick="setLang('id')" title="Bahasa Indonesia" class="w-6 h-6 rounded-full overflow-hidden border border-blue-900">
+        <img src="https://flagcdn.com/w20/id.png" alt="ID" class="w-full h-full object-cover" />
+      </button>
+      <button onclick="setLang('en')" title="English (US)" class="w-6 h-6 rounded-full overflow-hidden border border-blue-900">
+        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="w-full h-full object-cover" />
+      </button>
     </div>
+
+    <!-- Navigation Links -->
     <div>
       <a href="#intro">Intro</a>
       <a href="#step1">Steps</a>
